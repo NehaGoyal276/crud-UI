@@ -1,0 +1,13 @@
+/* Ensure the section takes up the full width of the viewport */
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    padding: 16px; /* Optional: add some padding around the button */
+  }
+  
+  /* Optional: Add custom button styles */
+  .custom-button {
+    background-color: #4CAF50; /* Custom background color */
+    color: white; /* Custom text color */
+  }
+  

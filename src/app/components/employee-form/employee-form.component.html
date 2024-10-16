@@ -1,0 +1,47 @@
+<div class="container">
+  @if(isEdit){
+    <h4> Edit Employee Detail</h4>
+  }@else{
+    <h5> Create Employee</h5>
+  }
+    
+    <form [formGroup]= "employeeForm" class="employee-form" (ngSubmit)="save()">
+      <div class="form-fields">
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Enter your name" formControlName="name">
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Email</mat-label>
+          <input type="string" matInput placeholder="Enter your email" formControlName="email">
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Age</mat-label>
+          <input type="string" matInput placeholder="Enter your age" formControlName="age">
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Salary</mat-label>
+          <input type="string" matInput placeholder="Enter your salary" formControlName="salary">
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Contact</mat-label>
+          <input type="string" matInput placeholder="Enter your contact number" formControlName= "contact">
+        </mat-form-field>
+        @if(!isEdit){
+        <div class="button-container">
+          <button mat-raised-button color="accent" class="submit-button" [disabled]="employeeForm.invalid">Submit</button>
+        </div>}
+        @else{
+        <div class="button-container">
+          <button mat-raised-button color="accent" class="submit-button" >Update</button>
+        </div>
+      }
+      </div>
+      
+    </form>
+  </div>
+  
